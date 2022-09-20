@@ -1,35 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalves-c <jalves-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/18 23:24:48 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/09/19 16:40:44 by jalves-c         ###   ########.fr       */
+/*   Created: 2022/09/19 17:38:56 by jalves-c          #+#    #+#             */
+/*   Updated: 2022/09/19 23:48:17 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-void	ft_putstr(char *str)
+char	*ft_strcpy(char *dest, char *src)
 {
-	int	i;
+	int		i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (src[i] != '\0')
 	{
-		write(1, &str[i], 1);
+		dest[i] = src[i];
 		i++;
 	}
+	dest[i] = '\0';
+	return (dest);
 }
 
-/*
 int	main(void)
 {
-	char	*str = "alow galera\n";
+	char *src;
+	char *dest;
 
-	ft_putstr(str);
+	src = calloc(11, sizeof(char));
+	src = "0123456789";
+	dest = calloc(11, sizeof(char));
+	ft_strcpy(dest, src);
+	printf("src: %s\n", src);
+	printf("dest: %s\n", dest);
 	return (0);
 }
-*/

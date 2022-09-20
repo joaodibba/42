@@ -1,29 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalves-c <jalves-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 00:06:41 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/09/19 17:24:46 by jalves-c         ###   ########.fr       */
+/*   Created: 2022/09/19 16:20:35 by jalves-c          #+#    #+#             */
+/*   Updated: 2022/09/19 17:22:42 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
 //#include <stdlib.h>
+//#include <stdio.h>
 
-void	ft_rev_int_tab(int *tab, int size)
+void	ft_sort_int_tab(int *tab, int size)
 {
 	int	i;
+	int	j;
 	int	swap;
 
 	i = 0;
-	while (i < (size / 2))
-	{
-		swap = tab[i];
-		tab[i] = tab[size - 1 - i];
-		tab[size - 1 - i] = swap;
+	while (i < size -1)
+	{	
+		j = 0;
+		while (j < size - i - 1)
+		{
+			if (tab[j] < tab[j + 1])
+			{
+				swap = tab[j];
+				tab[j] = tab[j + 1];
+				tab[j + 1] = swap;
+			}
+			j++;
+		}
 		i++;
 	}
 }
@@ -34,28 +43,23 @@ int	main(void)
 	int *tab;
 	int counter;
 
+	srand(1);
+	counter = 0;
 	tab = calloc(10, sizeof(int));
-	counter = 0;
 	while (counter < 10)
 	{
-		tab[counter] = counter;
+		tab[counter] = rand() % 100;
 		counter++;
 	}
-	counter = 0;
-	while (counter < 10)
-	{
+	counter = -1;
+	while (9 > counter++)
 		printf("%d ", tab[counter]);
-		counter++;
-	}
-	printf("\n");
-	ft_rev_int_tab(tab, 10);
-	counter = 0;
-	while (counter < 10)
-	{
+	ft_sort_int_tab(tab, 10);
+	printf("%c", '\n');
+	counter = -1;
+	while (9 > counter++)
 		printf("%d ", tab[counter]);
-		counter++;
-	}
-	printf("\n");
+	printf("%c", '\n');
 	return (0);
 }
 */

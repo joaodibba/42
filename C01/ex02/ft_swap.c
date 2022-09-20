@@ -6,22 +6,15 @@
 /*   By: jalves-c <jalves-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 23:09:31 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/09/18 23:12:17 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/09/19 17:25:38 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int	mai(int *a, int *b)
+void	ft_swap(int *a, int *b)
 {
 	int	troca;
 
-	*a = 42;
-	*b = 43;
 	troca = *a;
 	*a = *b;
 	*b = troca;
-	printf("%d\n", *a);
-	printf("%d\n", *b);
-	return (0);
 }
