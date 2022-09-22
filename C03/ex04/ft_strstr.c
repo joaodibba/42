@@ -6,30 +6,37 @@
 /*   By: jalves-c <jalves-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 01:33:53 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/09/21 02:17:03 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/09/21 20:23:12 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//#include <stdio.h>
+
 char	*ft_strstr(char *str, char *to_find)
 {
-	int i;
-	int y;
+	int	i;
+	int	j;
 
 	i = 0;
-	y = 0;
-	while(str[i] != '\0')
+	if (to_find[0] == '\0')
+		return (str);
+	while (str[i] != '\0')
 	{
-		if(str[i] == str[y])
+		j = 0;
+		while (str[i + j] != '\0' && str[i + j] == to_find[j])
 		{
-			while(to_find[y] != '\0')
-			{
-				i++;
-				y++;
-			}
+			if (to_find[j + 1] == '\0')
+				return (&str[i]);
+			j++;
 		}
-		else
-		{
-			i++;
-		}
+		i++;
 	}
+	return (0);
 }
+/*
+int	main(void)
+{
+	printf("resultado: %s", ft_strstr("paralelepipedo", "lelep"));
+	return (0);
+}
+*/
