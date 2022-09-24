@@ -6,12 +6,12 @@
 /*   By: jalves-c <jalves-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 23:23:39 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/09/21 00:06:05 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/09/24 18:49:14 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+//#include <stdio.h>
+//#include <string.h>
 
 char	*ft_strcat(char *dest, char *src)
 {
@@ -34,6 +34,7 @@ char	*ft_strcat(char *dest, char *src)
 	return (dest);
 }
 
+/*
 int	main(void)
 {
   char str1[15] = "Hello "; 
@@ -44,3 +45,4 @@ int	main(void)
   printf("Expected Result: %s\n", strcat(str3, str4));
   return (0);
 }
+*/

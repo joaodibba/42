@@ -6,17 +6,17 @@
 /*   By: jalves-c <jalves-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 00:56:33 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/09/21 01:09:32 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/09/24 18:52:08 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+//#include <stdio.h>
+//#include <string.h>
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
-	int	y;
+	unsigned int	i;
+	unsigned int	y;
 
 	i = 0;
 	y = 0;
@@ -24,7 +24,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	{
 		i++;
 	}
-	while (y <= nb && src[y] != '\0')
+	while (y < nb && src[y] != '\0')
 	{
 		dest[i] = src[y];
 			i++;
@@ -34,6 +34,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	return (dest);
 }
 
+/*
 int	main(void)
 {
   char str1[15] = "Hello "; 
@@ -44,3 +45,4 @@ int	main(void)
   printf("Expected Result: %s\n", strncat(str3, str4, 3));
   return (0);
 }
+*/

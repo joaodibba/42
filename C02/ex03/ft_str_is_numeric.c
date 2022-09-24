@@ -6,7 +6,7 @@
 /*   By: jalves-c <jalves-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 18:08:39 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/09/20 18:24:12 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/09/24 18:04:45 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	ft_str_is_numeric(char *str)
 	}
 	return (1);
 }
+
 /*
 int	ft_str_is_numeric(char *str);
 

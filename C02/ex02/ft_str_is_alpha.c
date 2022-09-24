@@ -6,7 +6,7 @@
 /*   By: jalves-c <jalves-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 00:23:21 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/09/20 18:07:08 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/09/24 18:36:41 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,8 @@ int	ft_str_is_alpha(char *str)
 	}
 	return (1);
 }
-/*
-int	ft_str_is_alpha(char *str);
 
+/*
 int	main(void)
 {
 	char *str1;
@@ -49,4 +48,5 @@ int	main(void)
 	printf("str3: %s, is_aplha: %d\n", str3, ft_str_is_alpha(str3));
 	printf("str4: %s, is_aplha: %d\n", str4, ft_str_is_alpha(str4));
 	return (0);
-}*/
+}
+*/

@@ -6,11 +6,11 @@
 /*   By: jalves-c <jalves-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 18:34:44 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/09/20 19:03:38 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/09/24 18:08:24 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
 
 int	ft_str_is_uppercase(char *str)
 {
@@ -30,8 +30,8 @@ int	ft_str_is_uppercase(char *str)
 	}
 	return (1);
 }
-
-/*int	main(void)
+/*
+int	main(void)
 {
 	char *str1;
 	char *str2;
@@ -47,4 +47,5 @@ int	ft_str_is_uppercase(char *str)
 	printf("str3:  %d\n", ft_str_is_uppercase(str3));
 	printf("str4:  %d\n", ft_str_is_uppercase(str4));
 	return (0);
-}*/
+}
+*/

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlowercase.c                                  :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalves-c <jalves-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 20:15:02 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/09/20 20:22:46 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/09/24 18:15:50 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
 
 char	*ft_strlowcase(char *str)
 {
@@ -28,6 +28,7 @@ char	*ft_strlowcase(char *str)
 	return (str);
 }
 
+/*
 int	main(void)
 {
 	char str1[] = "abcdefghi";
@@ -45,3 +46,4 @@ int	main(void)
 	printf("str3_low: %s\n", str3);
 	return (0);
 }
+*/

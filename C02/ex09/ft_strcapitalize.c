@@ -6,23 +6,23 @@
 /*   By: jalves-c <jalves-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 20:24:00 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/09/20 21:03:28 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/09/24 18:20:23 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
 
 char	*ft_strcapitalize(char *str)
 {
-	int i;
-	int upper;
+	int	i;
+	int	upper;
 
 	i = 0;
 	upper = 1;
 	while (str[i] != '\0')
 	{
-		if ((str[i] >= 'a' && str[i] <= 'z') ||
-			(str[i] >= 'A' && str[i] <= 'Z') ||
+		if ((str[i] >= 'a' && str[i] <= 'z') || \
+			(str[i] >= 'A' && str[i] <= 'Z') || \
 			(str[i] >= '0' && str[i] <= '9'))
 		{
 			if (upper && (str[i] >= 'a' && str[i] <= 'z'))
@@ -38,9 +38,7 @@ char	*ft_strcapitalize(char *str)
 	return (str);
 }
 
-
-char	*ft_strcapitalize(char *str);
-
+/*
 int	main(void)
 {
 	char str1[] = "alo maluco 42beleza!";
@@ -70,3 +68,4 @@ int	main(void)
 	printf("str6_c: %s\n", str6);
 	return (0);
 }
+*/

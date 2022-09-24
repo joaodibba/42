@@ -6,14 +6,14 @@
 /*   By: jalves-c <jalves-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 21:51:10 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/09/20 22:54:10 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/09/24 18:41:41 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 //#include <string.h>
 
-char	ft_strcmp(char *s1,char *s2)
+char	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
 
@@ -25,9 +25,11 @@ char	ft_strcmp(char *s1,char *s2)
 	return (s2[i] - s1[i]);
 }
 
-/*int main(void) {
+/*
+int main(void) {
   char str1[] = "teste", str2[] = "teste";
   printf("Result: %d\n", ft_strcmp(str1, str2));
   printf("Expected outcome: %d \n", strcmp(str1, str2));
   return (0);
-}*/
+}
+*/

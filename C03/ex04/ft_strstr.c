@@ -6,11 +6,9 @@
 /*   By: jalves-c <jalves-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 01:33:53 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/09/21 20:23:12 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/09/24 18:56:10 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//#include <stdio.h>
 
 char	*ft_strstr(char *str, char *to_find)
 {
@@ -33,10 +31,3 @@ char	*ft_strstr(char *str, char *to_find)
 	}
 	return (0);
 }
-/*
-int	main(void)
-{
-	printf("resultado: %s", ft_strstr("paralelepipedo", "lelep"));
-	return (0);
-}
-*/

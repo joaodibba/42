@@ -6,12 +6,12 @@
 /*   By: jalves-c <jalves-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 17:38:56 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/09/19 23:48:17 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/09/24 17:58:42 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+//#include <stdio.h>
+//#include <stdlib.h>
 
 char	*ft_strcpy(char *dest, char *src)
 {
@@ -27,6 +27,7 @@ char	*ft_strcpy(char *dest, char *src)
 	return (dest);
 }
 
+/*
 int	main(void)
 {
 	char *src;
@@ -40,3 +41,4 @@ int	main(void)
 	printf("dest: %s\n", dest);
 	return (0);
 }
+*/

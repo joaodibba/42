@@ -6,32 +6,28 @@
 /*   By: jalves-c <jalves-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 18:53:42 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/09/20 19:02:46 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/09/24 20:26:57 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
 
 int	ft_str_is_printable(char *str)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	while (str[i] >= 32 && str[i] <= 127)
 	{
-		if (str[i] == '\0')
-		{
-			return (0);
-		}
-		else
-		{
-			return (0);
-		}
 		i++;
 	}
-	return (1);
+	if (str[i] == '\0')
+		return (1);
+	else
+		return (0);
 }
 
+/*
 int	main(void)
 {
 	char *str1;
@@ -49,3 +45,4 @@ int	main(void)
 	printf("str4: %d\n", ft_str_is_printable(str4));
 	return (0);
 }
+*/
