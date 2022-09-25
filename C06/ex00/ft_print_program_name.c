@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalves-c <jalves-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/20 22:58:04 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/09/25 11:50:32 by jalves-c         ###   ########.fr       */
+/*   Created: 2022/09/25 13:31:52 by jalves-c          #+#    #+#             */
+/*   Updated: 2022/09/25 13:37:07 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-//#include <string.h>
+#include <unistd.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+void	ft_putchar(char c)
 {
-	unsigned int	i;
+	write(1, &c, 1);
+}
+
+int	main(int ac, char **av)
+{
+	int	i;
 
 	i = 0;
-	while (i <= n && s1[1] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
+	while (av[0][i] != '\0')
 	{
+		ft_putchar(av[0][i]);
 		i++;
 	}
-	return (s2[i] - s1[i]);
+	return (0);
 }
-
-/*
-int	main(void)
-{
-  char str1[] = "teste", str2[] = "teste";
-  printf("Result: %d\n", ft_strncmp(str1, str2, 5));
-  printf("Expected outcome: %d \n", strncmp(str1, str2, 5));
-  return (0);
-}
-*/
