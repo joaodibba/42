@@ -1,1 +1,1 @@
-find . -type f -o -type d -o -name '.' | wc -l
+find . -type f -or -type d -o -name '.' | wc -l

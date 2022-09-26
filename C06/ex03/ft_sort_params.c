@@ -6,7 +6,7 @@
 /*   By: jalves-c <jalves-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 23:31:58 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/09/25 23:34:15 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/09/26 21:04:21 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,25 +43,31 @@ int	ft_print_params(int argc, char **argv)
 	return (0);
 }
 
+void	ft_swap(char *i, char *j)
+{
+	char	swap;
+
+	swap = *i;
+	*i = *j;
+	*j = swap;
+}
+
 int	main(int argc, char **argv)
 {
-	char	*max;
-	int		s;
+	int		i;
+	int		j;
 
-	(void)argc;
-	(void)argv;
-	s = 1;
-	while (s < argc - 1)
+	i = 1;
+	while (i < argc - 1)
 	{
-		if (ft_strcmp(argv[s], argv[s + 1]) > 0)
+		j = 1;
+		while (j < argc - 1)
 		{
-			max = argv[s];
-			argv[s] = argv[s + 1];
-			argv[s + 1] = max;
-			s = 1;
+			if (ft_strcmp(argv[j], argv[j + 1]) > 0)
+				ft_swap(argv[j], argv[j + 1]);
+			j++;
 		}
-		else
-			s++;
+		i++;
 	}
 	ft_print_params(argc, argv);
 	return (0);

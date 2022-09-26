@@ -6,7 +6,7 @@
 /*   By: jalves-c <jalves-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 22:52:35 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/09/18 16:20:49 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/09/26 23:41:12 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,11 @@ void	ft_putnbr(int nb)
 	if (nb >= -2147483647 && nb <= 2147483647)
 	{
 		if (nb < 0)
+
+		asdasda
 		{
 			nb = -nb;
-			ft_putchar('-');
+			ft_putchar('-');a
 			ft_putnbr(nb);
 		}
 		else if (nb <= 9)
