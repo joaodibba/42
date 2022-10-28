@@ -1,50 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dibba <dibba@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/26 17:14:46 by dibba             #+#    #+#             */
-/*   Updated: 2022/10/27 17:49:33 by dibba            ###   ########.fr       */
+/*   Created: 2022/10/27 14:52:13 by dibba             #+#    #+#             */
+/*   Updated: 2022/10/28 18:22:05 by dibba            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_atoi(char *str)
+size_t	ft_strlen(const char *str)
 {
-	int	i;
-	int	res;
-	int	sign;
+	size_t	i;
 
 	i = 0;
-	res = 0;
-	sign = 1;
-	while (str[i] && (str[i] >= 9 && str[i] <= 13 || str[i] == 32))
+	while (str[i])
 		i++;
-	if (str[i] == '-')
-	{
-		sign = -1;
-		i++;
-	}
-	else if (str[i] == '+')
-	{
-		i++;
-	}
-	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
-	{
-		res *= 10;
-		res += str[i] - '0';
-		i++;
-	}
-	return (res * sign);
+	return (i);
 }
 
-int	main(int ac, char **av)
+/*int	main(int ac, char **av)
 {
-	if (ac <= 2)
-	{
-		printf("%d", ft_atoi(av[1]));
-	}
-}
+	if (ac == 2)
+		printf("length: %zu\n", ft_strlen(av[1]));
+	return (0);
+}*/

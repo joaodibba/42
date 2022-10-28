@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dibba <dibba@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 14:52:13 by dibba             #+#    #+#             */
-/*   Updated: 2022/10/27 18:37:13 by dibba            ###   ########.fr       */
+/*   Created: 2022/10/27 16:34:39 by dibba             #+#    #+#             */
+/*   Updated: 2022/10/28 18:21:35 by dibba            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-size_t	ft_strlen(const char *str)
+int	ft_isalnum(int x)
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	if ((x >= 'a' && x <= 'z') || (x >= 'A' && x <= 'Z') || \
+	(x >= '0' && x <= '9'))
+		return (1);
+	else
+		return (0);
 }
 
-int	main(int ac, char **av)
+/*
+int	main(void)
 {
-	if (ac == 2)
-		printf("length: %zu\n", ft_strlen(av[1]));
-	return (0);
+	int	x;
+
+	x = '4';
+	printf("%d", ft_isalnum(x));
 }
+*/
