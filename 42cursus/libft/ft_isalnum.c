@@ -6,23 +6,25 @@
 /*   By: dibba <dibba@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 16:34:39 by dibba             #+#    #+#             */
-/*   Updated: 2022/10/27 16:58:04 by dibba            ###   ########.fr       */
+/*   Updated: 2022/10/27 17:41:11 by dibba            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int		ft_isalnum(int x)
+int	ft_isalnum(int x)
 {
-	if ((x >= 'a' && x <= 'z') || (x >= 'A' && x <= 'Z') || (x >= '0' && x <= '9'))
-		return(1);
+	if ((x >= 'a' && x <= 'z') || (x >= 'A' && x <= 'Z') || \
+	(x >= '0' && x <= '9'))
+		return (1);
 	else
-		return(0);
+		return (0);
 }
 
-int main (void)
+int	main(void)
 {
 	int	x;
+
 	x = '4';
-	printf("%d",ft_isalnum(x));
+	printf("%d", ft_isalnum(x));
 }
