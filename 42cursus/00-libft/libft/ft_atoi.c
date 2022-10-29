@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 18:25:49 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/10/28 18:25:51 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/10/29 19:27:10 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ int	ft_atoi(char *str)
 	return (res * sign);
 }
 
-/*
 int	main(int ac, char **av)
 {
 	if (ac <= 2)
@@ -50,4 +49,3 @@ int	main(int ac, char **av)
 		printf("%d", ft_atoi(av[1]));
 	}
 }
-*/
