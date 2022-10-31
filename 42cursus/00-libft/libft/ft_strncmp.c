@@ -3,10 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dibba <dibba@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 18:06:37 by dibba             #+#    #+#             */
-/*   Updated: 2022/10/28 18:18:52 by dibba            ###   ########.fr       */
+/*   Updated: 2022/10/31 18:22:48 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
+int	ft_strncmp( const char *s1, const char *s2, size_t n )
+{
+	while ((n > 0) && (*s1 == *s2) && (*s1 != '\0'))
+	{
+		s1++;
+		s2++;
+		n--;
+	}
+	if (n == 0)
+		return (0);
+	return ((unsigned char)*s1 - (unsigned char)*s2);
+}
