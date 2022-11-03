@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 20:35:37 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/10/31 18:12:28 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/11/01 13:34:46 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_atoi(const char *str)
 	size_t	res;
 	int		i;
 	int		sign;
- 
+
 	i = 0;
 	res = 0;
 	sign = 1;

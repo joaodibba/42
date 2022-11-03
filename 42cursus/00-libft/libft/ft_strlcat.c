@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 12:53:57 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/11/01 13:13:07 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/11/01 19:52:49 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 
 	i = 0;
 	if (size == 0)
-		return (0);
+		return (ft_strlen(src));
 	src_len = ft_strlen(src);
 	dest_len = ft_strlen(dest);
 	if (size == 0 || size <= dest_len)
