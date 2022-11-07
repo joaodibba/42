@@ -6,12 +6,12 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:52:13 by dibba             #+#    #+#             */
-/*   Updated: 2022/11/01 13:09:59 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/11/07 18:27:50 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-/*
+#include "libft.h"
+
 size_t	ft_strlen(const char *str)
 {
 	size_t	i;
@@ -21,4 +21,3 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
-*/

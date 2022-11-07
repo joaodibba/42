@@ -6,12 +6,11 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 20:35:37 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/11/01 13:34:46 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/11/07 18:27:28 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <limits.h>
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
