@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:21:27 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/11/10 17:32:31 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/11/10 22:40:32 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ void	*ft_calloc(size_t nitems, size_t size);
 char	*ft_strdup(const char *s);
 int		ft_memcmp(const void *str1, const void *str2, size_t n);
 char	*ft_strchr(const char *str, int c);
+void	*ft_memmove(void *dest, const void *src, size_t n);
 
 #endif
