@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   _fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/14 17:21:26 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/11/15 20:00:55 by jalves-c         ###   ########.fr       */
+/*   Created: 2022/11/15 20:30:42 by jalves-c          #+#    #+#             */
+/*   Updated: 2022/11/21 18:34:53 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char	*str;
-	size_t	i;
-	size_t	strlen;
-
-	strlen = (size_t)ft_strlen(s);
-	if (start >= strlen)
-		str = malloc(1);
-	else if (len >= strlen)
-		str = (char *)malloc(strlen - start + 1);
-	else
-		str = (char *)malloc(len + 1);
-	if (!str)
-		return (NULL);
-	i = 0;
-	if (strlen > start && str)
+	if (n == INT_MIN)
 	{
-		while (i < len)
-		{
-			str[i] = s[start + i];
-			i++;
-		}
+		ft_putchar_fd('-', fd);
+		ft_putchar_fd('2', fd);
+		ft_putnbr_fd(147483648, fd);
 	}
-	str[i] = 0;
-	return (str);
+	else if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(-n, fd);
+	}
+	else if (n > 9)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
+	else
+		ft_putchar_fd(n + 48, fd);
 }

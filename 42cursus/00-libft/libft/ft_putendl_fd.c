@@ -1,47 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/17 22:52:35 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/11/15 20:32:19 by jalves-c         ###   ########.fr       */
+/*   Created: 2022/11/15 20:26:32 by jalves-c          #+#    #+#             */
+/*   Updated: 2022/11/15 20:29:37 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_putchar(char c)
+void	ft_putendl_fd(char *s, int fd)
 {
-	write(1, &c, 1);
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
-
-void	ft_putnbr(int nb)
-{
-	if (nb >= -2147483647 && nb <= 2147483647)
-	{
-		if (nb < 0)
-
-		{
-			nb = -nb;
-			ft_putchar('-');
-			ft_putnbr(nb);
-		}
-		else if (nb <= 9)
-		{
-			ft_putchar(nb + 48);
-		}
-		else
-		{
-			ft_putnbr(nb / 10);
-			ft_putnbr(nb % 10);
-		}
-	}
-}
-/*
-int	main(void)
-{
-	ft_putnbr(-2147483646);
-	return (0);
-}*/

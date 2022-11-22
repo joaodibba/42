@@ -1,41 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/14 17:21:26 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/11/15 20:00:55 by jalves-c         ###   ########.fr       */
+/*   Created: 2022/11/16 18:00:18 by jalves-c          #+#    #+#             */
+/*   Updated: 2022/11/16 19:57:51 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+char	*ft_strrev(char *str)
 {
-	char	*str;
-	size_t	i;
-	size_t	strlen;
+	int		i;
+	int		size;
+	char	swap;
 
-	strlen = (size_t)ft_strlen(s);
-	if (start >= strlen)
-		str = malloc(1);
-	else if (len >= strlen)
-		str = (char *)malloc(strlen - start + 1);
-	else
-		str = (char *)malloc(len + 1);
-	if (!str)
-		return (NULL);
 	i = 0;
-	if (strlen > start && str)
+	size = ft_strlen(str) - 1;
+	while (size > i)
 	{
-		while (i < len)
-		{
-			str[i] = s[start + i];
-			i++;
-		}
+		swap = str[i];
+		str[i] = str[size];
+		str[size] = swap;
+		size--;
+		i++;
 	}
-	str[i] = 0;
 	return (str);
 }
