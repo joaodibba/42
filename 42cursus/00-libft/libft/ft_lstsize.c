@@ -1,41 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/29 20:35:37 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/11/29 22:50:38 by jalves-c         ###   ########.fr       */
+/*   Created: 2022/11/29 22:06:58 by jalves-c          #+#    #+#             */
+/*   Updated: 2022/11/29 22:31:53 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	ft_lstsize(t_list *lst)
 {
-	size_t	res;
-	int		i;
-	int		sign;
-
-	i = 0;
-	res = 0;
-	sign = 1;
-	while (str[i] && ((str[i] >= 9 && str[i] <= 13) || str[i] == 32))
-		i++;
-	if (str[i] == '-' || str[i] == '+' )
-	{
-		if (str[i] == '-')
-			sign = -1;
-		i++;
-	}
-	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
-		res = res * 10 + (str[i++] - '0');
-	if (i > 19 || res == ULLONG_MAX)
-	{
-		if (sign == 1)
-			return (-1);
+	if (!lst)
 		return (0);
-	}
-	return (res * sign);
+	else
+		return (1 + ft_lstsize(lst -> next));
 }

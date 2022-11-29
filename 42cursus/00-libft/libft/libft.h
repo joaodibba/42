@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:21:27 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/11/23 00:42:25 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/11/29 23:25:54 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ void		*ft_memchr(const void *str, int c, size_t n);
 char		*ft_substr(const char *source, unsigned int start, size_t len);
 void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
+void		ft_putendl_fd(char *s, int fd);
 char		*ft_itoa(int n);
 char		*ft_strrev(char *str);
 int			ft_intlen(int n);
@@ -57,6 +58,12 @@ char		*ft_strtrim(char const *str, char const *set);
 char		*ft_strjoin(char const *str1, char const *str2);
 void		ft_striteri(char *s, void (*f)(unsigned int, char*));
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));	
+t_list		*ft_lstnew(void *content);
+void		ft_lstadd_front(t_list **lst, t_list *new);
+int			ft_lstsize(t_list *lst);
+t_list		*ft_lstlast(t_list *lst);
+void		ft_lstadd_back(t_list **lst, t_list *new);
+void		ft_lstdelone(t_list *lst, void (*del)(void*));
+void		ft_lstclear(t_list **lst, void (*del)(void*));
 
 #endif
-

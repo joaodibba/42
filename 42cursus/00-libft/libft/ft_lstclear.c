@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/22 21:24:51 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/11/29 22:10:31 by jalves-c         ###   ########.fr       */
+/*   Created: 2022/11/29 23:20:51 by jalves-c          #+#    #+#             */
+/*   Updated: 2022/11/29 23:25:24 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	int		i;
-	char	*new_s;
+	t_list	*node;
 
-	i = 0;
-	if (!s)
-		return (NULL);
-	new_s = malloc(ft_strlen(s) + 1);
-	if (!new_s)
-		return (NULL);
-	while (s[i])
+	if (!lst || !*lst || !del)
+		return ;
+	while (*lst != NULL)
 	{
-		new_s[i] = f(i, s[i]);
-		i++;
+		node = (*lst)-> next;
+		ft_lstdelone(*lst, del);
+		*lst = node;
 	}
-	new_s[i] = '\0';
-	return (new_s);
 }
