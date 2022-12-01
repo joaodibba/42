@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 22:11:58 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/11/29 22:45:33 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/12/01 16:27:19 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
-		return (NULL);
+		return (0);
 	while (lst -> next != NULL)
 		lst = lst -> next;
 	return (lst);

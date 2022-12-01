@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 17:10:08 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/11/16 19:58:01 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/12/01 16:25:16 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_itoa(int n)
 		sign = -1;
 	str = (char *)malloc(sizeof(char) * ft_intlen(n) + 1);
 	if (!str)
-		return (NULL);
+		return (0);
 	if (n == 0)
 		str[i++] = '0';
 	while (n != 0)

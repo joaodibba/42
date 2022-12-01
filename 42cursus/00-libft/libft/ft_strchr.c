@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 17:58:10 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/11/10 18:25:49 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/12/01 18:39:24 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ char	*ft_strchr(const char *str, int c)
 		str++;
 	if (*str == (char)c)
 		return ((char *)str);
-	return (NULL);
+	return (0);
 }

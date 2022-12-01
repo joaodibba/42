@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 16:37:18 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/11/10 16:56:30 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/12/01 16:24:19 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t nitems, size_t size)
 
 	dest = malloc(nitems * size);
 	if (!dest)
-		return (NULL);
+		return (0);
 	ft_bzero(dest, nitems * size);
 	return (dest);
 }
