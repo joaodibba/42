@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/29 20:35:37 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/12/02 23:35:16 by jalves-c         ###   ########.fr       */
+/*   Created: 2022/12/02 11:24:33 by jalves-c          #+#    #+#             */
+/*   Updated: 2022/12/02 11:42:49 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	size_t	res;
-	size_t	i;
-	size_t	sign;
-
-	i = 0;
-	res = 0;
-	sign = 1;
-	while (str[i] && ((str[i] >= 9 && str[i] <= 13) || str[i] == 32))
-		i++;
-	if (str[i] == '-' || str[i] == '+' )
+	if (!lst || !f)
+		return ;
+	while (lst)
 	{
-		if (str[i] == '-')
-			sign = -1;
-		i++;
+		f(lst -> content);
+		lst = lst -> next;
 	}
-	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
-		res = res * 10 + (str[i++] - '0');
-	return (res * sign);
 }
