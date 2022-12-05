@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:21:27 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/12/02 12:40:41 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/12/03 03:49:31 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,6 @@ void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
 char		*ft_itoa(int n);
-char		*ft_strrev(char *str);
-int			ft_intlen(int n);
 void		ft_putnbr_fd(int n, int fd);
 char		*ft_strtrim(char const *str, char const *set);
 char		*ft_strjoin(char const *str1, char const *str2);

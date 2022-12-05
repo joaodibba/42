@@ -6,11 +6,45 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 17:10:08 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/12/01 16:25:16 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/12/03 03:48:36 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char	*ft_strrev(char *str)
+{
+	int		i;
+	int		size;
+	char	swap;
+
+	i = 0;
+	size = ft_strlen(str) - 1;
+	while (size > i)
+	{
+		swap = str[i];
+		str[i] = str[size];
+		str[size] = swap;
+		size--;
+		i++;
+	}
+	return (str);
+}
+
+int	ft_intlen(int n)
+{
+	int	len;
+
+	len = 0;
+	if (n <= 0)
+		len++;
+	while (n)
+	{
+		len++;
+		n = n / 10;
+	}
+	return (len);
+}
 
 char	*ft_itoa(int n)
 {
