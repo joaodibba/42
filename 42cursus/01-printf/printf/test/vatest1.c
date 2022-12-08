@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   vatest.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/05 16:40:37 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/12/06 18:31:49 by jalves-c         ###   ########.fr       */
+/*   Created: 2022/12/07 17:53:28 by jalves-c          #+#    #+#             */
+/*   Updated: 2022/12/07 18:22:26 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <stdarg.h>
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+
+void	fun(int total, ...)
 {
-	size_t	i;
-	size_t	j;
+	va_list	n_arg;
+	int		n;
+	int		n1;
 
-	i = 0;
-	if (*little == '\0' || little == NULL)
-		return ((char *)big);
-	while (big[i] != '\0' && (i < len))
-	{
-		j = 0;
-		while (big[i + j] != '\0' && (big[i + j] == little[j]) && (i + j < len))
-		{
-			if (little[j + 1] == '\0')
-				return ((char *)big + i);
-			j++;
-		}
-		i++;
-	}
-	return (NULL);
+	va_start(n_arg, total);
+
+	n = va_arg(n_arg, int);
+	n1 = va_arg(n_arg, int);
+	printf("%d", n);
+//	printf("%d", n1);
+	printf("%d", va_arg(n_arg, int));
+}
+
+int	main(void)
+{
+	fun(3, 10, 20, 30, 90);
 }

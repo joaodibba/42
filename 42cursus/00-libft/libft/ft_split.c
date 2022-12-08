@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 16:54:15 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/12/05 16:54:16 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/12/08 16:14:18 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ char	*malloc_word(const char *s, char c)
 	while (s[i] && s[i] != c)
 		i++;
 	word = (char *)malloc(sizeof(char) * (i + 1));
+	if (!word)
+		return (NULL);
 	i = 0;
 	while (s[i] && s[i] != c)
 	{

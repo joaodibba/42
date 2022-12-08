@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/05 16:40:37 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/12/06 18:31:49 by jalves-c         ###   ########.fr       */
+/*   Created: 2022/12/06 22:07:44 by jalves-c          #+#    #+#             */
+/*   Updated: 2022/12/07 17:42:19 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+int	ft_printf(const char *format, ...)
 {
-	size_t	i;
-	size_t	j;
+	va_list	n_args;
+	int		i;
 
-	i = 0;
-	if (*little == '\0' || little == NULL)
-		return ((char *)big);
-	while (big[i] != '\0' && (i < len))
+	va_start(n_args, format);
+	while (format[i] != '\0')
 	{
-		j = 0;
-		while (big[i + j] != '\0' && (big[i + j] == little[j]) && (i + j < len))
-		{
-			if (little[j + 1] == '\0')
-				return ((char *)big + i);
-			j++;
-		}
-		i++;
+
+
 	}
-	return (NULL);
 }
