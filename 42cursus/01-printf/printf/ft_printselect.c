@@ -6,13 +6,9 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 17:49:08 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/12/07 17:50:12 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/12/11 04:14:13 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
-void	ft_printselect(char c)
-{
-	
-}

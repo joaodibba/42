@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 16:39:46 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/12/06 18:18:53 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/12/11 19:45:41 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,3 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	str[j] = 0;
 	return (str);
 }
-
