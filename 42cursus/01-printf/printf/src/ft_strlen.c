@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/11 04:03:11 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/12/11 04:10:15 by jalves-c         ###   ########.fr       */
+/*   Created: 2022/12/12 12:08:18 by jalves-c          #+#    #+#             */
+/*   Updated: 2022/12/12 14:40:50 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../include/ft_printf.h"
 
-void	*ft_putstr(char *str)
+int	ft_strlen(const char *str)
 {
-	while (*str)
-		ft_putchar(*(str++));
+	int	i;
+
+	i = 0;
+	while (*(str++))
+		i++;
+	return (i);
 }

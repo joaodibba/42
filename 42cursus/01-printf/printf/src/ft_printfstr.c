@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vatest.c                                           :+:      :+:    :+:   */
+/*   ft_printfstr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/07 17:53:28 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/12/07 18:22:26 by jalves-c         ###   ########.fr       */
+/*   Created: 2022/12/11 04:03:11 by jalves-c          #+#    #+#             */
+/*   Updated: 2022/12/13 12:50:42 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdarg.h>
+#include "../include/ft_printf.h"
 
-
-void	fun(int total, ...)
+int	ft_printfstr(char *str)
 {
-	va_list	n_arg;
-	int		n;
-	int		n1;
+	int		len;
 
-	va_start(n_arg, total);
-
-	n = va_arg(n_arg, int);
-	n1 = va_arg(n_arg, int);
-	printf("%d", n);
-//	printf("%d", n1);
-	printf("%d", va_arg(n_arg, int));
-}
-
-int	main(void)
-{
-	fun(3, 10, 20, 30, 90);
+	if (!str)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
+	len = ft_strlen(str);
+	write(1, str, len);
+	return (len);
 }

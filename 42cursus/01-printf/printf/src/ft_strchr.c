@@ -1,14 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printselect.c                                   :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/07 17:49:08 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/12/11 04:14:13 by jalves-c         ###   ########.fr       */
+/*   Created: 2022/12/12 12:35:08 by jalves-c          #+#    #+#             */
+/*   Updated: 2022/12/12 14:40:59 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../include/ft_printf.h"
 
+char	*ft_strchr(const char *str, int c)
+{
+	while (*str && ((char)c != *str))
+		str++;
+	if (*str == (char)c)
+		return ((char *)str);
+	return (0);
+}
