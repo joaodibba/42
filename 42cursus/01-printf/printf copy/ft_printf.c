@@ -6,13 +6,11 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 22:07:44 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/12/13 14:27:22 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/12/13 15:41:31 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-int	ft_printf(const char *format, ...)
 
 int	ft_printf(const char *format, ...)
 {
