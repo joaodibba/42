@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printfnbr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/07 17:13:19 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/12/19 17:18:22 by jalves-c         ###   ########.fr       */
+/*   Created: 2022/12/19 17:15:06 by jalves-c          #+#    #+#             */
+/*   Updated: 2022/12/19 17:35:53 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "../include/ft_printf.h"
 
-# include <stdarg.h>
-# include <unistd.h>
-# include <stdio.h>
-# include <limits.h>
+int	ft_printfnbr(int n)
+{
+	int	ret;
 
-int		ft_printf(const char *format, ...);
-int		ft_printfchar(char c);
-int		ft_printfselect(char c, va_list args);
-int		ft_printfstr(char *str);
-int		ft_strlen(const char *str);
-char	*ft_strchr(const char *str, int c);
-int		ft_printfnbr(int n);
-
-#endif
+	ret = 0;
+	if (n < 0)
+		ret += ft_printfchar('-');
+	if (n > 9)
+		ret += ft_printfnbr(n / 10);
+	ret += ft_printfchar((char)(n % 10 - 48));
+}

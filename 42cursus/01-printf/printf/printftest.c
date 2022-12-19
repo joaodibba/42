@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   printftest.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/07 17:13:19 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/12/19 17:18:22 by jalves-c         ###   ########.fr       */
+/*   Created: 2022/12/19 16:55:12 by jalves-c          #+#    #+#             */
+/*   Updated: 2022/12/19 17:05:56 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include <stdio.h>
 
-# include <stdarg.h>
-# include <unistd.h>
-# include <stdio.h>
-# include <limits.h>
+int	main(void)
+{
+	char	c;
+	int		x;
+	int		*ptr;
+	char	*str;
 
-int		ft_printf(const char *format, ...);
-int		ft_printfchar(char c);
-int		ft_printfselect(char c, va_list args);
-int		ft_printfstr(char *str);
-int		ft_strlen(const char *str);
-char	*ft_strchr(const char *str, int c);
-int		ft_printfnbr(int n);
-
-#endif
+	c = 'a';
+	x = 123;
+	ptr = &x;
+	str = "azAZ123";
+	printf("NO FORMAT: azAZ123\n");
+	printf("%% FORMAT: %%\n");
+	printf("%%c FORMAT: %c\n", c);
+	printf("%%s FORMAT: %s\n", str);
+	printf("%%p FORMAT: %p\n", ptr);
+	printf("%%d FORMAT: %d\n", x);
+	printf("%%i FORMAT: %i\n", x);
+}
