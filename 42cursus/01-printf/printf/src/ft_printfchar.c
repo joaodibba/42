@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_printfchar.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/05 16:39:33 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/12/13 15:17:54 by jalves-c         ###   ########.fr       */
+/*   Created: 2022/12/11 03:41:39 by jalves-c          #+#    #+#             */
+/*   Updated: 2022/12/13 12:50:37 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../include/ft_printf.h"
 
-#include "libft.h"
-
-int	ft_toupper(int c)
+int	ft_printfchar(char c)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c -= 32);
-	return (c);
+	write(1, &c, 1);
+	return (1);
 }
