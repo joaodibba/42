@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_printfstr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/12 12:35:08 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/12/12 14:40:59 by jalves-c         ###   ########.fr       */
+/*   Created: 2022/12/11 04:03:11 by jalves-c          #+#    #+#             */
+/*   Updated: 2022/12/20 05:17:54 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 
-char	*ft_strchr(const char *str, int c)
+int	ft_printfs(char *str)
 {
-	while (*str && ((char)c != *str))
-		str++;
-	if (*str == (char)c)
-		return ((char *)str);
-	return (0);
+	if (!str)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
+	return (write(1, str, ft_strlen(str)));
 }

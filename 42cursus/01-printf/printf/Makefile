@@ -6,7 +6,7 @@
 #    By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 13:55:01 by jalves-c          #+#    #+#              #
-#    Updated: 2022/12/12 14:37:07 by jalves-c         ###   ########.fr        #
+#    Updated: 2022/12/20 05:18:47 by jalves-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,12 +16,16 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRC	=	ft_printf.c \
-		src/ft_printfchar.c \
+SRC	=	src/ft_printf.c \
+		src/ft_printfc.c \
 		src/ft_printfselect.c \
-		src/ft_printfstr.c \
-		src/ft_strchr.c \
+		src/ft_printfs.c \
 		src/ft_strlen.c \
+		src/ft_printfn.c \
+		src/ft_printfun.c \
+		src/ft_printflx.c \
+		src/ft_printfux.c \
+		src/ft_printfp.c \
 		
 OBJ = $(SRC:.c=.o)
 

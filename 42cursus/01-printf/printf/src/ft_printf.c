@@ -6,11 +6,11 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 22:07:44 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/12/19 16:54:30 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/12/20 05:14:28 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/ft_printf.h"
+#include "../include/ft_printf.h"
 
 int	ft_printf(const char *format, ...)
 {
@@ -24,7 +24,7 @@ int	ft_printf(const char *format, ...)
 		if (*format == '%')
 			ret += ft_printfselect(*(++format), args);
 		else
-			ret += ft_printfchar(*format);
+			ret += ft_printfc(*format);
 		format++;
 	}
 	va_end(args);

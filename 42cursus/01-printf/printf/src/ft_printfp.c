@@ -1,28 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printfnbr.c                                     :+:      :+:    :+:   */
+/*   ft_printfp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/19 17:15:06 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/12/19 17:39:42 by jalves-c         ###   ########.fr       */
+/*   Created: 2022/12/20 03:39:50 by jalves-c          #+#    #+#             */
+/*   Updated: 2022/12/20 04:43:32 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 
-int	ft_printfnbr(int n)
-{
-	int	ret;
-
-	ret = 0;
-	if (n < 0)
-	{
-		n *= -1;
-		ret += ft_printfchar('-');
-	}
-	if (n > 9)
-		ret += ft_printfnbr(n / 10);
-	ret += ft_printfchar((char)(n % 10 - 48));
-}

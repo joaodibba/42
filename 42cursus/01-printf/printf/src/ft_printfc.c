@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printfstr.c                                     :+:      :+:    :+:   */
+/*   ft_printfchar.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/11 04:03:11 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/12/13 12:50:42 by jalves-c         ###   ########.fr       */
+/*   Created: 2022/12/11 03:41:39 by jalves-c          #+#    #+#             */
+/*   Updated: 2022/12/20 05:14:22 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 
-int	ft_printfstr(char *str)
+int	ft_printfc(char c)
 {
-	int		len;
-
-	if (!str)
-	{
-		write(1, "(null)", 6);
-		return (6);
-	}
-	len = ft_strlen(str);
-	write(1, str, len);
-	return (len);
+	return (write(1, &c, 1));
 }
