@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 17:15:06 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/12/20 05:20:55 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/12/22 14:59:57 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,3 @@ int	ft_printfn(int n)
 		return (ft_printfc(n + 48));
 	return (ft_printfn(n / 10) + ft_printfc(n % 10 + 48));
 }
-
