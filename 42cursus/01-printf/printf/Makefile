@@ -6,13 +6,15 @@
 #    By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 13:55:01 by jalves-c          #+#    #+#              #
-#    Updated: 2022/12/20 05:18:47 by jalves-c         ###   ########.fr        #
+#    Updated: 2022/12/22 16:38:43 by jalves-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
 CC = gcc
+
+#RM = rm
 
 CFLAGS = -Wall -Wextra -Werror
 

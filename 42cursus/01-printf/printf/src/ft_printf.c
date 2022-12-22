@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 22:07:44 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/12/20 05:14:28 by jalves-c         ###   ########.fr       */
+/*   Updated: 2022/12/22 16:34:52 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,4 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (ret);
 }
+
