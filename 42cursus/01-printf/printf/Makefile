@@ -6,7 +6,7 @@
 #    By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 13:55:01 by jalves-c          #+#    #+#              #
-#    Updated: 2023/01/10 15:11:00 by jalves-c         ###   ########.fr        #
+#    Updated: 2023/01/10 19:05:35 by jalves-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,19 +14,12 @@ NAME = libftprintf.a
 
 CC = gcc
 
-RM = rm
+RM = rm -f
 
 CFLAGS = -Wall -Wextra -Werror
 
 SRC	=	src/ft_printf.c \
-		src/ft_printfc.c \
-		src/ft_printfselect.c \
-		src/ft_printfs.c \
-		src/ft_strlen.c \
-		src/ft_printfn.c \
-		src/ft_printfun.c \
-		src/ft_printfx.c \
-		src/ft_printfp.c \
+		src/ft_printformat.c
 		
 OBJ = $(SRC:.c=.o)
 

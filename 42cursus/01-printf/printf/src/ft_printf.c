@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 15:09:57 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/01/10 15:10:06 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/01/10 19:04:08 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,44 +31,38 @@ int	ft_printf(const char *format, ...)
 	return (ret);
 }
 
-/*
-#include <time.h>
-int main(void)
+int	ft_printfselect(char c, va_list args)
 {
-clock_t begin = clock();
-char i = 's';
-char i2[20] = "Hello World";
-int i3 = 34;
-int i4 = -23;
-int *i5 = &i3;
-printf("Printf char: %c\n", i);
-ft_printf("Ft_Printf char: %c\n\n", i);
-
-printf("Printf string: %s\n", i2);
-ft_printf("Ft_Printf string: %s\n\n", i2);
-
-printf("Printf percent: %%\n");
-ft_printf("Ft_Printf percent: %%\n\n");
-
-printf("Printf integer: %d || %i\n", i3, i4);
-ft_printf("Ft_Printf integer: %d || %i\n\n", i3, i4);
-
-printf("Printf pointer: %p\n", &i5);
-ft_printf("Ft_Printf pointer: %p\n\n", &i5);
-
-printf("Printf unsigned number: %u\n", i3);
-ft_printf("Ft_Printf unsigned number: %u\n\n", i3);
-
-printf("Printf number in hexadecimal: %x\n", i);
-ft_printf("Ft_Printf number in hexadecimal: %x\n\n", i);
-
-printf("Printf number in hexadecimal(UP): %X\n", i);
-ft_printf("Ft_Printf number in hexadecimal(UP): %X\n\n", i);
-
-clock_t end = clock();
-double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
-printf("\n total time taken: %lf \n", time_spent);
-return (0);
+	if (c == 'c')
+		return (ft_printfc(va_arg(args, int)));
+	else if (c == 's')
+		return (ft_printfs(va_arg(args, char *)));
+	else if (c == 'd' || c == 'i')
+		return (ft_printfn(va_arg(args, int)));
+	else if (c == 'u')
+		return (ft_printfun(va_arg(args, unsigned int)));
+	else if (c == 'x')
+		return (ft_printfx(va_arg(args, unsigned int), HEXMIN));
+	else if (c == 'X')
+		return (ft_printfx(va_arg(args, unsigned int), HEXMAX));
+	else if (c == 'p')
+		return (ft_printfp(va_arg(args, unsigned long long)));
+	else if (c == '%')
+		return (ft_printfc('%'));
+	return (0);
 }
-*/
->>>>>>> Stashed changes
+
+int	ft_printfc(char c)
+{
+	return (write(1, &c, 1));
+}
+
+int	ft_strlen(const char *str)
+{
+	int	i;
+
+	i = 0;
+	while (*(str++))
+		i++;
+	return (i);
+}
