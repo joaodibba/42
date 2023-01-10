@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 17:49:08 by jalves-c          #+#    #+#             */
-/*   Updated: 2022/12/22 16:04:03 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/01/10 14:53:40 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ int	ft_printfselect(char c, va_list args)
 	else if (c == 'u')
 		return (ft_printfun(va_arg(args, unsigned int)));
 	else if (c == 'x')
-		return (ft_printflx((unsigned long long)va_arg(args, unsigned int)));
+		return (ft_printfx(va_arg(args, unsigned int), HEXMIN));
 	else if (c == 'X')
-		return (ft_printfux(va_arg(args, int)));
+		return (ft_printfx(va_arg(args, unsigned int), HEXMAX));
 	else if (c == 'p')
 		return (ft_printfp(va_arg(args, unsigned long long)));
 	else if (c == '%')
